@@ -1,0 +1,253 @@
+---
+title: "Data Cleaning"
+author: "Daniel"
+date: "2026-03-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(stringr)
+```
+
+### Dataset Loading
+
+```{r}
+df <- read.csv("raw_data.csv")
+head(df)
+```
+
+### Sorting the Dataset
+
+I will sort the records by their ID.
+
+```{r}
+df <- df |> arrange(ID)
+```
+ 
+### Loading "Clean" Names
+
+After asking the AI to clean the names with symbols, I load the processed name data.
+
+```{r}
+df$name <- read.csv("cleaned_names.csv")$name
+```
+
+### Cleaning the `name` column
+
+```{r}
+df$name <- str_to_title( str_trim(df$name) )
+```
+
+### Converting `gender` values
+
+```{r}
+df$gender <- as.factor(df$gender) |> recode("M" = "Male", "F" = "Female")
+```
+
+### Converting Department to Uppercase
+
+```{r}
+df$department <- str_to_upper(df$department)
+```
+
+### Converting Salary to Decimal Numbers
+
+```{r}
+df$salary <- str_replace(df$salary, "\$", "") |> as.numeric()
+```
+
+We can verify that although RStudio represents numbers as integers, they are actually decimal numbers.
+
+```{r}
+sum(round(df$salary) != df$salary, na.rm=T)
+```
+
+### Converting Dates
+
+```{r}
+df$contract_start_date <- parse_date_time(df$contract_start_date,
+                orders = c("m/d/Y", "Y-m-d HMS")) |> 
+  ymd()
+```
+
+### Recoding `tenure` and `contract_type`
+
+#### `tenure`:
+  - True: Full-time job
+  - False: Part-time job
+  
+#### `contract_type`:
+  - True: Permanent
+  - False: Fixed-term
+
+```{r}
+df$tenure <- ifelse(df$tenure, "full time", "part time")
+df$contract_type <- ifelse(df$contract_type, "permanent", "fixed-term")
+```
+
+### Cleaning Country of Origin
+
+Before starting, let's take a look at the unique values for the `country` column:
+
+```{r}
+unique(df$country)
+```
+
+It is necessary to clean extra spaces and remove the `?` character from some values.
+
+```{r}
+df$country <- str_replace_all(df$country, "\?", "") |> # remove ?
+  str_trim() |>  # remove extra spaces
+  str_to_title() |>  # convert to title case
+  as.factor() |>  # convert to factor (to recode values later)
+  fct_recode(  # recoding some misspelled values
+    "Spain"   = "Spian",
+    "Spain"   = "Sapin",
+    "France"  = "Fracne",
+    "France"  = "Frnace",
+    "France"  = "Fra",
+    "China"   = "Chian",
+    "China"   = "Chnia",
+    "Italy"   = "Italia",
+    "Italy"   = "Tialy",
+    "Italy"   = "It",
+    "Japan"   = "Japán",
+    "Japan"   = "Jpn",
+    "Brazil"  = "Brasil",
+    "USA"     = "Usa"
+  )
+```
+
+### Email Address Creation
+
+Using the employee's name initials and their ID, I will construct the corresponding email addresses.
+
+The first step will be to separate each name into columns.
+
+```{r}
+separate_wider_delim(df |> head(), cols = "name", " ", names_sep = "_") |> 
+  select(starts_with("name"))
+```
+
+Once we have verified that the method works, we apply it to the entire dataframe.
+
+```{r}
+# generates an error!
+# separate_wider_delim(df, cols = "name", " ", names_sep = "_")
+```
+
+An error occurs because some names have 5 words. I will inspect those names...
+
+```{r}
+splitted_names <- str_split(df$name, " ")
+splitted_names |> head()
+```
+
+Searching for those with more than 3 words:
+
+```{r}
+splitted_names[lengths(splitted_names) > 3]
+```
+
+I will obtain the indexes for those names:
+
+```{r}
+(indexes <- which (lengths(splitted_names) > 3))
+```
+
+The problematic Spanish names do not make sense from a linguistic perspective. I will proceed to modify them manually.
+
+```{r}
+shortened_names <- c("Francisco José Fernández",
+                     "María Dolores Garcia",
+                     "María Dolores López",
+                     "María Carmen Gómez",
+                     "Ana María Sánchez",
+                     "José Luis Fernández",
+                     "José Luis Rodríguez",
+                     "Teresa María Martínez",
+                     "José Luis Fernández",
+                     "Josefa María Pérez",
+                     "Yan Yan Zhag",
+                     "José Antônio Lima",
+                     "Laura Maria Rodríguez",
+                     "María Carmen Pérez")
+
+# create a dataframe with the indexes and corrected values
+(shortened_names_df <- data.frame("index" = indexes,
+                                  "original_name" = df[indexes, "name"], 
+                                 "name" = shortened_names) )
+```
+I will export these shortened names into a csv file. It will be handy for the cleaning process using Excel.
+
+```{r}
+shortened_names_df |> write.csv("shortened_names.csv", row.names = F)
+```
+
+
+Now I will substitute them in the `name` column:
+
+```{r}
+df[shortened_names_df$index, "name"] <- shortened_names_df$name
+```
+
+Attempting to separate name components again:
+
+```{r}
+separate_wider_delim(df, cols = "name", " ", names_sep = "_") |> 
+  select(starts_with("name"))
+```
+
+Now everything is correct. I want to obtain the initial of each name component.
+
+```{r}
+df <- separate_wider_delim(df, cols = "name", delim= " ",
+                           names_sep = "_", cols_remove = F) |> 
+  # reorganize columns
+  rename( "name" = "name_name") |> 
+  relocate(name, .before = "name_1")
+
+df |> head()
+```
+
+I want to obtain the initial of each name component.
+
+```{r}
+df <- df |>
+  # use columns starting with name_
+  # and extract the initial from each one
+  mutate(across(starts_with("name_"), ~ str_sub(., 1,1))) |> 
+  # join these columns using a separator: ""
+  # columns name_1, name_2 and name_3 will disappear after the join
+  unite("initials", starts_with("name_" ), sep="" ) |>
+  # convert them to lowercase
+  mutate(initials = str_to_lower(initials) )
+
+df |> head()
+```
+
+Finally, we construct the email: `initials.ID@clean_data.com`
+
+```{r}
+df <- df |> mutate( email = paste0(initials, ".", ID, "@clean_data.com") )
+
+# remove the initials column
+df <- df |> select(-initials)
+
+# reorder columns
+df <- df |>
+  relocate(email, .before="name") |> 
+  relocate(country, .after="name")
+```
+
+With the clean dataset, we proceed to export it to a CSV file:
+
+```{r}
+df |> write.csv("cleaned_data_R.csv", row.names = FALSE)
+```

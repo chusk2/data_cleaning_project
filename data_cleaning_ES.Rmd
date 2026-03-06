@@ -1,0 +1,235 @@
+---
+title: "Data Cleaning"
+author: "Daniel"
+date: "2026-03-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(stringr)
+```
+
+### Carga del dataset
+
+```{r}
+df <- read.csv("raw_data.csv")
+head(df)
+```
+### Ordenar el dataset
+
+Ordenaré los registros por su ID.
+
+```{r}
+df <- df |> arrange(ID)
+```
+ 
+### Carga de los nombres "limpios"
+
+Después de pedir a la IA que limpie los nombres con símbolos, cargo los datos de los nombres procesados.
+
+```{r}
+df$name <- read.csv("cleaned_names.csv")$name
+```
+
+### Limpieza de columna `name`.
+
+```{r}
+df$name <- str_to_title( str_trim(df$name) )
+```
+
+
+### Convertir valores de `gender`.
+```{r}
+df$gender <- as.factor(df$gender) |> recode("M" = "Male", "F" = "Female")
+```
+
+### Convertir a mayúsculas el departamento
+
+```{r}
+df$department <- str_to_upper(df$department)
+```
+
+### Convertir a número decimal el salario
+```{r}
+df$salary <- str_replace(df$salary, "\\$", "") |> as.numeric()
+```
+
+Podemos comprobar que aunque R Studio represente los números como enteros, en realidad siguen siendo números con decimales.
+
+```{r}
+sum(round(df$salary) != df$salary, na.rm=T)
+```
+
+### Convertir las fechas
+```{r}
+df$contract_start_date <- parse_date_time(df$contract_start_date,
+                orders = c("m/d/Y", "Y-m-d HMS")) |> 
+  ymd()
+```
+
+### Recodificar `tenure` y `contract_type`
+
+#### `tenure`:
+  - True: Full time job
+  - False: Part time job
+  
+#### `contract_type`:
+  - True: Permanent
+  - False: Fixed-term
+
+```{r}
+df$tenure <- ifelse(df$tenure, "full time", "part time")
+df$contract_type <- ifelse(df$contract_type, "permanent", "fixed-term")
+```
+
+### Limpieza del pais de origen
+
+Antes de comenzar, echemos un vistazo a los valores únicos para la columna `country`:
+```{r}
+unique(df$country)
+```
+
+Es necesario limpiar de espacios extra y eliminar el carácter `?` de algunos valores.
+```{r}
+df$country <- str_replace_all(df$country, "\\?", "") |> # eliminar ?
+  str_trim() |>  # eliminar espacios extra
+  str_to_title() |>  # convertir a nombre propio con mayúsculas en la inicial
+  as.factor() |>  # convertir a factor (con idea de recodificar valores luego)
+  fct_recode(  # recodificamos algunos valores mal escritos
+    "Spain"   = "Spian",
+    "Spain"   = "Sapin",
+    "France"  = "Fracne",
+    "France"  = "Frnace",
+    "France"  = "Fra",
+    "China"   = "Chian",
+    "China"   = "Chnia",
+    "Italy"   = "Italia",
+    "Italy"   = "Tialy",
+    "Italy"   = "It",
+    "Japan"   = "Japán",
+    "Japan"   = "Jpn",
+    "Brazil"  = "Brasil",
+    "USA"     = "Usa"
+  )
+```
+
+### Creación de la dirección de email
+
+Usando las iniciales del nombre del empleado y su ID, construiré las correspondientes direcciones de email.
+
+El primer paso será separar cada nombre en columnas.
+
+```{r}
+separate_wider_delim(df |> head(), cols = "name", " ", names_sep = "_") |> 
+  select(starts_with("name"))
+```
+Una vez que hemos comprobado que funciona el método, lo aplicamos al todo el dataframe.
+
+```{r}
+# ¡genera un error!
+# separate_wider_delim(df, cols = "name", " ", names_sep = "_")
+```
+Existe un error, porque algunos nombres tienen 5 palabras. Inspeccionaré esos nombres...
+
+```{r}
+splitted_names <- str_split(df$name, " ")
+splitted_names |> head()
+```
+
+Busco aquellos que tengan más de 3 palabras:
+
+```{r}
+splitted_names[lengths(splitted_names) > 3]
+```
+Voy a obtener los índices de esos nombres:
+
+```{r}
+(indexes <- which (lengths(splitted_names) > 3))
+```
+
+Los nombres españoles problemáticos no tienen sentido desde el punto de vista del idioma español. Voy a proceder a modificarlos manualmente.
+
+```{r}
+shortened_names <- c("Francisco José Fernández",
+                     "María Dolores Garcia",
+                     "María Dolores López",
+                     "María Carmen Gómez",
+                     "Ana María Sánchez",
+                     "José Luis Fernández",
+                     "José Luis Rodríguez",
+                     "Teresa María Martínez",
+                     "José Luis Fernández",
+                     "Josefa María Pérez",
+                     "Yan Yan Zhag",
+                     "José Antônio Lima",
+                     "Laura Maria Rodríguez",
+                     "María Carmen Pérez")
+
+# creo un dataframe con los índices y los valores corregidos
+(shortened_names_df <- data.frame("index" = indexes,
+                                 "name" = shortened_names) )
+```
+Ahora voy a sustituirlos en la columna `name`:
+
+```{r}
+df[shortened_names_df$index, "name"] <- shortened_names_df$name
+```
+
+Intentamos de nuevo separar los nombres en componentes:
+```{r}
+separate_wider_delim(df, cols = "name", " ", names_sep = "_") |> 
+  select(starts_with("name"))
+```
+Ahora todo está correcto. Quiero obtener la inicial de cada componente del nombre.
+
+```{r}
+df <- separate_wider_delim(df, cols = "name", delim= " ",
+                           names_sep = "_", cols_remove = F) |> 
+  # reorganizo las columnas
+  rename( "name" = "name_name") |> 
+  relocate(name, .before = "name_1")
+
+df |> head()
+```
+Quiero obtener la inicial de cada componente del nombre.
+
+```{r}
+df <- df |>
+  # usa las columnas que empiezan por name_
+  # y extrae la inicial de cada una
+  mutate(across(starts_with("name_"), ~ str_sub(., 1,1))) |> 
+  # une esas columnas mediante un separador: ""
+  # las columnas name_1, name_2 y name_3 desaparecerán tras la unión
+  unite("initials", starts_with("name_" ), sep="" ) |>
+  # conviértelas a minúsculas
+  mutate(initials = str_to_lower(initials) )
+
+df |> head()
+```
+Finalmente, construimos el email: `initials.ID@clean_data.com`
+
+```{r}
+df <- df |> mutate( email = paste0(initials, ".", ID, "@clean_data.com") )
+
+# eliminamos la columna initials
+df <- df |> select(-initials)
+
+# reordenamos las columnas
+
+df <- df |>
+  relocate(email, .before="name") |> 
+  relocate(country, .after="name")
+```
+
+Con el dataset limpio, procedemos a su exportación a un archivo csv:
+
+```{r}
+df |> write.csv("cleaned_data_R.csv", row.names = FALSE)
+```
+

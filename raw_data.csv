@@ -1,0 +1,251 @@
+ID,name,gender,department,salary,contract_start_date,tenure,contract_type,country
+3751,wolfgang frank fischer,M,Engineering,$1944778.73,04/18/2020,False,True,Germany
+9709,S3chIKO YSOHIkO YAMaMoTO,F,Business Development,$4034920.53,01/20/2015,True,False,Japan
+1319,yuki  hiroshi  yamamoto,M,Accounting,$4448553.53,01/16/2012,True,False,Japan
+5516,james robert rodriguez,M,Engineering,$3703534.33,03/21/2015,True,False,USA
+3359,tH$MAS RobeRT brOWN,M,Services,$2211818.29,02/25/2021,False,False,USA
+5178,márcia ana olivei&a,F,Services,$4020821.87,03/24/2012,False,True,Brazil
+6976,angela angela colombo,F,Legal,$4088847.65,2015-12-07 00:00:00,False,False,Italy
+9480,mei lanh uang,F,Engineering,$3335383.26,2014-07-04 00:00:00,True,True,China
+1496,catherine sylvie durand,F,Training,$3206328.21,10/15/2020,True,True,France
+5521,MARCOS ANTÔNIO GOMES,M,Product Management,$2939854.34,2015-04-08 00:00:00,False,False,Brazil
+9827,mARíA CArmen1ACrMEN PéRez,F,Business Development,$2686327.77,07/31/2015,True,True,Spain
+1429,LUIGI VINCENZO COLOMBO,M,Marketing,$5000802.77,07/27/2018,True,True,Italy
+2432,carlos marcos oliveira,M,Support,$2146329.48,2013-11-01 00:00:00,True,False,Brasil
+2432,peter wolfgang fischer,M,Support,$2146329.48,2013-11-01 00:00:00,True,False,germany
+1147,peter klaus becker,M,,,2018-02-12 00:00:00,,True,Germany
+1746,fang juan wang,F,Marketing,$4107502.35,10/16/2015,True,False,China
+6833,GIUSEPPE VINCENZO ROMANO,M,Support,$4742467.27,12/15/2013,True,False,Italy
+9893,michael christopher rodriguez,M,Business Development,$2808107.37,2016-08-09 00:00:00,True,False,USA
+3683,vincenzo francesco marino,M,Support,$2651870.70,01/16/2022,False,True,Italia
+5341,klaus michael wagner,M,Legal,$4065740.81,10/28/2013,True,True,Germany?
+5086,isabel laura pérez,F,Marketing,$5046175.34,07/15/2020,False,False,Spian
+3677,thomas  robert  martinez,M,Services,$2529947.11,05/20/2019,False,False,USA
+6852,alInE AlIne soUza,F,Business Development,$2522226.35,09/29/2019,True,True,Brazil
+4539,josé luis josé luis rodríguez,M,Support,$3438005.06,2020-10-06 00:00:00,True,True,Spain
+5750,6samu hiroshi suzuki,M,Accounting,$4840506.88,2018-11-01 00:00:00,False,False,Japan
+2824,jin gyan liu,F,Human Resources,$2828591.95,09/17/2018,False,True,china
+3838,michael richard smith,M,Legal,$4784169.37,10/27/2020,True,False,USA
+3838,marcOS JosÉ GoMES,M,Legal,$4784169.37,10/27/2020,True,False,Brazil
+8039,keiko  michiko  ito,F,Engineering,$3370868.02,08/26/2015,False,True,Japan
+4838,jing  ping  li,F,Research and Development,$3521147.58,08/20/2021,False,False,China
+2854,jessic alinda brown,F,Services,$1849120.99,08/23/2018,True,False,USA   
+2854,monika sabine schneider,F,Services,$1849120.99,08/23/2018,True,False,Germany
+2976,laain nicolas bernard,M,Engineering,$3408155.28,09/27/2015,False,True,Fracne
+2976,klaus klaus wagner,M,Engineering,$3408155.28,09/27/2015,False,True,Germany
+4412,hans wolfgang weber,M,Research and Development,$3716559.55,2016-03-02 00:00:00,False,True,Germany
+6657,frAnceScO viNCenzO rOsSI,M,Product Management,$2749593.05,08/23/2020,True,True,Italy
+5678,yoko yoshiko yamamoto,F,Accounting,$2160915.31,12/31/2019,False,True,Japan
+8338,david  richard  garcia,M,Business Development,$1856124.46,2017-09-12 00:00:00,True,True,USA
+7487,christophe alain laurent,M,Research and Development,$3425774.28,2019-01-08 00:00:00,True,False,France
+5822,michael john martinez,M,Services,$3323893.92,2018-07-11 00:00:00,False,True,USA
+1938,maria ursula schulz,F,Human Resources,$2118243.19,09/29/2011,True,True,Germany
+4829,josé luiz silva,M,Product Management,$3401568.66,2011-10-02 00:00:00,True,False,Brazil
+4595,giovanni giuseppe marino,M,Research and Development,$3510688.25,2012-06-04 00:00:00,False,True,Italy
+8062,klaus peter schnieder,M,Business Development,$4240644.07,2011-08-07 00:00:00,True,True,Germany
+8524,yan  yan  zha9g,F,Services,$3298104.81,09/24/2020,True,True,
+1582,christian frank schmidt,M,Human Resources,$3573985.37,11/30/2015,False,True,Germany
+5027,manuel francisco sánchez,M,Research and Development,$5035442.35,2013-10-05 00:00:00,False,True,Spain
+7397,keiko  yoko  nakamura,F,Legal,$4815552.02,11/29/2021,False,True,Japan
+2189,ju nwei liu,M,Research and Development,$5091098.52,03/24/2017,False,True,China
+7381,CHRISTIAN FRANK WEBER,M,Product Management,$2564885.71,2019-06-09 00:00:00,True,False,Germany
+7199,petra ursula wagner,F,Services,$5018242.11,12/30/2018,False,True,Germany
+1064,cArMelA GIOvannAR ICcI,F,Accounting,$5165921.39,2016-08-03 00:00:00,False,False,
+1371,antônio joão alves,M,Legal,$1981906.19,2013-04-07 00:00:00,False,False,Brazil
+1549,fRANCISCo LuIz pEReiRA,M,Accounting,$4150662.90,01/24/2014,False,False,Brazil
+1957,fernanda maria oliveira,F,Services,$2776175.25,05/16/2016,False,True,Brazil
+6936,ling yan li,F,Training,$2083385.54,2015-03-08 00:00:00,False,True,
+2511,maría dolores maría dolores lópez,F,Engineering,$4889972.64,2017-03-02 00:00:00,True,False,Spain
+6714,giuseppina giovanna marino,F,Legal,$2611498.95,2017-03-08 00:00:00,False,True,Italy
+9549,takashi  akira  nakamura,M,Human Resources,$2421244.24,2020-06-04 00:00:00,True,False,Japan
+4633,david  richard  martinez,M,Legal,$4968507.26,12/13/2019,True,True,USA
+6065,christopher  richard&johnson,M,Services,$4958393.44,2022-12-06 00:00:00,False,True,usa
+1135,adnreas wolfgang hoffmann,M,Training,$3601189.19,2018-01-08 00:00:00,True,True,Germany?
+4185,paulo paluo rodrigues,M,Business Development,$2104995.17,2020-10-01 00:00:00,False,True,Brazil
+2376,ursula petra schmidt,F,Business Development,$2761135.87,05/29/2015,True,True,Germany
+4907,anna rosa greco,F,Legal,$3631644.90,04/23/2015,False,False,Italy
+5235,wililam thomas johnson,M,Product Management,$2453295.02,01/29/2012,True,False,USA
+1794,manuel  josé  sánchez,M,Engineering,$2336074.87,05/23/2018,True,True,Spain
+7540,fernanda ana lima,F,Support,$4656019.73,2017-02-07 00:00:00,True,True,Brazil
+1490,CATHERINE MARTINE DUBOIS,F,Engineering,$3499965.76,2015-11-08 00:00:00,False,True,France
+2078,giuseppe marior usso,M,Marketing,$3538087.02,05/14/2014,True,True,
+2149,marÍa DoLorEs TEresa garC1A,F,,,2020-04-11 00:00:00,,False,SPAIN
+2149,laura laura sánc*ez,F,,,2020-04-11 00:00:00,,False,Spain
+6140,rené NicOlAs tHOmaS,M,Accounting,$4013987.92,2019-06-03 00:00:00,True,True,France
+6140,ANGElO AngElo mAriNO,M,Accounting,$4013987.92,2019-06-03 00:00:00,True,True,Italy
+5962,lucia caterina russo,F,Accounting,$2607996.32,03/27/2012,True,True,Italy
+9045,mary mary smith,F,Human Resources,$4027673.44,2021-08-09 00:00:00,True,False,USA
+2754,fang ling liu,F,Accounting,$4512765.18,2021-09-07 00:00:00,False,False,China
+9177,NAthalie  moNIquE  RoBeRt,F,Business Development,$4359972.20,08/19/2017,False,False,France
+8155,rosa giuseppina rossi,F,Training,$3880520.78,2021-10-03 00:00:00,True,True,Italy
+8155,yOShIko ToMoKO nAKAm8RA,F,Training,$3880520.78,2021-10-03 00:00:00,True,True,Japan
+2382,anôtnio marcos silva,M,Human Resources,$3227260.16,2018-05-11 00:00:00,True,True,BRAZIL
+1616,michiko yoshiko kobayashi,F,Support,$4884611.30,03/18/2014,False,True,Japan
+5689,maria teresa ricci,F,Research and Development,$3651953.72,2011-05-07 00:00:00,False,False,Italy?
+3031,ana maría carmen sánchez,F,Sales,$1938320.11,2011-10-05 00:00:00,True,True,Spain
+9303,ángel  javier  #artínez,M,Services,$2124789.86,2021-11-05 00:00:00,True,False,Spain
+5795,louis andré petit,M,Support,$3739272.43,02/24/2019,False,True,france
+7779,fRaNk Frank fIschER,M,,,2021-06-01 00:00:00,,True,Germany
+6582,pierre michel durand,M,Business Development,$3606952.08,08/26/2021,False,False,France
+1026,isabelle  nathalie  dubois,F,Research and Development,$3057032.59,2014-05-02 00:00:00,False,False,France
+9111,laUra MAr6a CARMEN roDrÍgUeZ,F,Training,$1961952.63,09/23/2021,True,True,Spain
+8540,nicolas  philippe  robert,M,Human Resources,$3842439.81,2021-08-02 00:00:00,False,True,FRA
+7358,li jing wa!g,F,   Sales,$2644727.30,08/16/2012,True,True,China
+8069,vincenzo  vincenz#  esposito,M,Sales,$4602728.46,02/23/2012,True,True,Italy
+9973,na9Halie moNiqUe DuBoIs,F,Research and Development,$3135106.52,08/19/2012,True,False,France
+5551,sarah mary&agrcia,F,Support,$2046006.62,09/25/2015,True,True,USA
+4553,yan*yan huang,F,Support,$2277588.28,12/28/2014,True,True,Chian
+9200,adriana  maria  rodrigues,F,Human Resources,$1805190.75,01/19/2021,False,False,Brazil
+2187,JAVIER DAVID LÓPEZ,M,Services,$3431157.60,09/28/2022,False,False,Spain
+1241,carmela rosa greco,F,Human Resources,$3142122.03,2020-10-10 00:00:00,False,False,IT
+2152,ping min zhao,F,Support,$4974530.99,06/24/2014,True,True,China
+5651,yan fang li,F,Legal,$4331429.46,11/23/2019,True,False,China
+1789,david1david  fernández,M,Support,$2375030.51,2021-11-10 00:00:00,True,False, Spain 
+1143,giuseppe  giuseppe  esposito,M,Training,$4106273.07,2015-10-04 00:00:00,False,False,italy
+2710,josé  david  0onzález,M,Marketing,$3727382.74,2013-07-12 00:00:00,False,True,Spain
+1639,juan ma9uel rodríguez,M,Marketing,$4900273.46,2011-07-12 00:00:00,True,False,Spain
+5991,sandrine  sylvie  moreau,F,Services,$1990535.20,2016-08-02 00:00:00,True,True,France
+9455,fang lan wang,F,Marketing,$1835283.34,10/25/2015,False,True,China
+7416,nathalie sylvie martin,F,Marketing,$1917020.95,2020-08-11 00:00:00,True,True,France
+7044,rosa maria colombo,F,    Services,$4384792.69,11/17/2017,True,True,ITALY
+1925,CatERina LUcia cOLOMBo,F,Human Resources,$4277858.65,2012-03-05 00:00:00,False,False,Italy
+6521,christophe nicolas richard,M,Business Development,$2602113.96,2021-07-10 00:00:00,False,True,France
+4412,vincenzo salvatore russo,M,Services,$3862584.16,02/25/2022,False,True,Italy
+3932,akira satoshi watanabe,M,Services,$2107328.52,02/15/2021,False,False,Japan
+2090,JOSEPH THOMAS MILLRE,M,Accounting,$1864906.90,2015-03-08 00:00:00,False,True,USA
+1074,MARTINE ISABELLE RICHARD,F,Research and Development,$3379571.19,11/26/2013,True,True,France
+6330,luiz luiz o1iveira,M,Training,$1979430.96,2014-08-10 00:00:00,True,True,Brazil
+1475,fraNcisco #osé LuIs fERnÁndez,M,Marketing,$5118039.66,09/16/2014,True,False,spain
+3183,william wliliam garcia,M,Engineering,$4942157.79,04/17/2020,True,False,USA
+4049,lucia angela rossi,F,Human Resources,$3852427.65,07/24/2011,True,True,Italy
+8113,ursula karin schulz,F,Research and Development,$3442164.94,10/23/2020,True,True,Germany
+3802,osamu hiroshi tanaka,M,Support,$2892121.22,10/16/2021,False,True,Japan
+8086,yuki  shinji  ito,M,Research and Development,$5131325.93,2013-10-02 00:00:00,False,True,Japan
+6217,wolfgang andreas weber,M,Services,$4601325.64,04/13/2016,True,True,Germany
+5427,pietro giovanni esposito,M,Support,$2243850.78,02/13/2016,False,True,Italy
+7996,teresa maría c5rmen martínez,F,Product Management,$2458360.48,06/29/2013,False,False,Spain   
+7078,AN%ELA  CARMELA  GRECO,F,Legal,$3288307.40,2014-07-12 00:00:00,False,True,Italy
+2073,hcristian klaus fischer,M,,,03/31/2016,,False,Germany
+4484,lucas luiz gomes,M,Business Development,$3679339.46,08/26/2015,True,True,Brazil
+2972,pietro angelo russo,M,Business Development,$3237260.43,07/22/2022,False,True,Italy
+8768,JOSÉ  ANTÔNIO L IMA,M,Marketing,$3339972.13,2016-03-12 00:00:00,True,False,Brazil
+7631,laura maría lópez,F,Engineering,$3901853.71,2020-03-02 00:00:00,False,True,Spain
+6136,michael  klaus  schmidt,M,Services,$4562932.43,08/20/2020,True,True,Germany
+7540,hiroko yoko tanaka,F,Engineering,$4017712.48,10/23/2022,True,False,Japan
+7540,MIN LINGZ HANG,F,Engineering,$4017712.48,10/23/2022,True,False,China
+3428,giovanna carmela romano,F,Services,$4997170.65,08/13/2018,False,True,Italy
+5999,monique  sandrine  robert,F,Training,$3401350.74,09/21/2011,False,True,France
+1552,gang lei1zhou,M,Legal,$3769458.55,03/29/2011,True,True,China
+2918,ANToNio  ATnONio  gÓMez,M,Marketing,$2829761.90,11/15/2020,True,False,Spain
+3034,marcos josé silva,M,Legal,$2214753.88,2017-03-04 00:00:00,False,True,Brazil
+7797,jie hao yang,M,Business Development,$5042117.07,02/28/2013,True,True,China
+5400,ping fang wu,F,Support,$3162287.75,2014-05-09 00:00:00,True,True,China
+7819,mie  lan  wu,F,Product Management,$1963334.76,2013-08-04 00:00:00,False,False,China
+4173,alain&jea nthomas,M,Product Management,$2919030.69,2019-09-08 00:00:00,True,True,France?
+4084,sandrine sandrine durand,F,Product Management,$2218584.92,2022-02-07 00:00:00,False,False,France
+3010,maría maría ca*men gómez,F,Support,$2651769.39,09/23/2020,False,True,
+6450,michael michael schmidt,M,Product Management,$4970178.96,11/17/2015,False,False,Germany
+6450,lucas  marcos  rodrigues,M,Product Management,$4970178.96,11/17/2015,False,False,Brazil
+2494,lan fang&zhao,F,Research and Development,$4543116.92,2016-07-05 00:00:00,True,True,China
+1058,jennifer susan jones,F,Legal,$3050752.13,2015-08-11 00:00:00,False,False,USA?
+1058,ping yan yagn,F,Legal,$3050752.13,2015-08-11 00:00:00,False,False,China
+5356,francesco mario ferrari,M,Marketing,$4836004.62,09/21/2016,True,True,Italy   
+2059,christopher christopher johnson,M,Legal,$2805358.92,02/14/2016,True,False,USA
+7715,HANS WOLFGAGN B@CKER,M,Product Management,$3020849.46,05/18/2019,True,False,Germany
+9830,jeSsIca sUSan JoNes,F,Engineering,$4522126.22,04/29/2021,False,False,USA
+7098,MASAKO HIROKO KOBAYASHI,F,Services,$4264990.88,2014-11-11 00:00:00,False,False,Japan
+3456,FRaNcisCo anTÔnio silvA,M,Sales,$3528990.30,04/28/2016,False,True,Brazil
+6846,danile francisco martin,M,Business Development,$4665179.15,04/24/2022,True,True,Spain
+7383,isabelle catherine martin,F,Business Development,$4579858.37,05/25/2016,False,True,France
+2651,miCHI%o YosHiKo YamAmOTO,F,Human Resources,$4896967.41,2015-05-03 00:00:00,True,True,Japan
+4521,jie lei li,M,Engineering,$2952956.08,04/19/2015,False,False,China
+3097,juliaan aline silva,F,Sales,$3257776.45,2011-02-08 00:00:00,False,True,Brazil
+8254,rené  louis  dubois,M,Product Management,$4497285.51,03/15/2016,True,False,France
+4212,ALINE ALINE SANTOS,F,Marketing,$1803190.83,08/16/2020,False,False,Brazil
+4212,hiroko michiko ito,F,Marketing,$1803190.83,08/16/2020,False,False,Japan
+2759,stefan  stefan  müller,M,Legal,$3788769.91,02/22/2019,True,False,Germany
+4640,fernanda maria lima,F,Legal,$5123510.78,06/28/2011,False,False,Brazil
+4933,christian  frank  müller,M,Marketing,$2856686.61,2011-03-06 00:00:00,True,True,Germany
+1008,Yuki  hIrsOHI  WATAnaBe,M,Product Management,$4408836.33,10/13/2012,False,False,JPN
+2189,petra  ursula  fischer,F,Support,$3648801.84,04/18/2018,True,True,Germany
+1567,robert john garcia,M,Marketing,$2917255.88,2022-10-01 00:00:00,True,False,USA
+6077,mary susan jones,F,Support,$2504274.94,12/30/2019,True,True,USA
+6962,richard joseph williasm,M,Legal,$3322197.25,10/14/2017,False,False,USA
+9382,FRANCISCO FRANCISCO MARTIN,M,Business Development,$5132572.82,03/20/2013,False,True,Spain
+9600,3ang jun liu,M,Engineering,$2342554.45,01/26/2014,True,True,China
+2376,alnie  francisca  santos,F,Engineering,$4061822.42,2021-07-04 00:00:00,False,True,Brazil
+2632,salvatore giovanni rossi,M,Support,$2933579.69,01/16/2015,True,False,Italy
+6133,monique marie thomas,F,Product Management,$5015594.84,2012-08-07 00:00:00,False,True,France
+9967,antônia antônia oliveira,F,Research and Development,$4487246.59,03/20/2015,True,True,Brazil
+9967,cARMELa lUCia ferRARI,F,Research and Development,$4487246.59,03/20/2015,True,True,Italy
+7359,juliana antônia ferreira,F,Business Development,$4721278.74,2020-06-10 00:00:00,True,False,Brazil
+3508,klaus wolfgang meyer,M,Legal,$4288562.82,10/18/2013,True,False,Germany
+2915,yan ping huang,F,Research and Development,$5069903.59,12/17/2011,True,False,China
+3515,josé  luis  daniel  fernández,M,Research and Development,$2494101.47,03/26/2013,False,True,Spain
+5640,rené christophe robert,M,Product Management,$3936575.88,2015-06-09 00:00:00,True,False,Frnace
+4329,lucia angeal colombo,F,Legal,$2029662.38,2020-07-07 00:00:00,True,True,IT
+4329,maria sabine weber,F,Legal,$2029662.38,2020-07-07 00:00:00,True,True,Germany
+1578,juliana maria ferreira,F,Legal,$3396111.91,03/18/2016,True,False,Brazil
+5626,renate maria hoffmann,F,Research and Development,$3873724.72,2013-05-07 00:00:00,True,False,Germany
+2402,ana antônia gomes,F,Product Management,$4975692.07,03/13/2018,True,False,Brazil
+4963,hao lei li,M,Legal,$2329285.16,2022-08-02 00:00:00,False,True,China
+4213,KENJi toRu WATaNABe,M,Support,$2983621.99,2021-11-01 00:00:00,False,False,Japan
+5987,françoise martine thomas,F,Legal,$3200878.66,01/26/2017,False,False,France
+9511,toru yu7i kobayashi,M,Training,$1987896.78,05/18/2014,True,False,Japan
+5581,andre2s peter schneider,M,Sales,$3987308.43,2015-09-05 00:00:00,True,True,Germany
+4239,akiko yoshiko suzuki,F,Accounting,$3807156.00,2017-11-02 00:00:00,True,True,Japan
+4626,yang ju nyang,M,Marketing,$3573050.40,04/22/2014,False,False,Chnia
+4626,angelo pietro bianchi,M,Marketing,$3573050.40,04/22/2014,False,False,Italy
+6567,min lan wang,F,Training,$4758505.54,07/20/2016,True,True,China
+5242,juliana  fernanda  silva,F,Marketing,$4730720.28,06/25/2014,False,False,Brazil
+4368,angelo giuseppe ricci,M,Sales,$3362468.43,03/15/2015,True,True,tIaly
+1126,alain andré robert,M,Sales,$2439935.37,03/19/2019,True,False,France
+6247,maria  rosa  ferrari,F,Business Development,$4486680.87,2021-12-06 00:00:00,True,True,Italy
+6315,ANDRÉ RENÉ RICHARD,M,Engineering,$3900776.81,02/16/2011,True,True,France
+6315,akira kenji kobayashi,M,Engineering,$3900776.81,02/16/2011,True,True,Japan
+3483,joseph thomas martinez,M,Engineering,$2636971.33,04/26/2013,False,True,USA
+5462,ISABEL TERESA LÓPZE,F,Sales,$4782600.80,02/15/2019,False,True,Spain?
+9841,li yan chen,F,Accounting,$4618778.42,09/14/2021,True,True,China
+4203,nicolas jean laurent,M,Legal,$1996763.25,04/28/2016,True,False,FRANCE
+5077,HelgA Sabine MeyER,F,Accounting,$3730608.53,03/20/2014,False,False,germany
+3869,rosa teresa ricci,F,Support,$3687983.95,05/22/2015,True,True,Italy
+1393,min min wu,F,Research and Development,$1875943.58,11/17/2010,True,True,China
+5726,yang qiang zaho,M,Sales,$4453496.57,2011-03-10 00:00:00,True,False,China
+8088,josé luis josé luis fernández,M,Human Resources,$3754719.94,2011-03-01 00:00:00,False,False,Spain
+7230,hiroshi satoshi tanaka,M,Accounting,$4473507.76,2012-03-03 00:00:00,False,False,Japan
+1849,THOMAS  THOMAS  SCHNEIDER,M,Services,$3262741.78,01/31/2012,False,False,Germany
+8378,nathalie  sandrine  moreau,F,,,2014-10-07 00:00:00,,True,France
+2434,hans hans wagner,M,Engineering,$2096091.96,2014-03-07 00:00:00,True,True,Germany
+5633,sarah mary miller,F,Support,$3174126.13,12/14/2012,True,True,USA
+8392,josefa maría pilar pérez,F,Training,$2444665.13,10/21/2019,True,False,Sapin
+9180,mrác&a  juliana  pereira,F,Legal,$4449940.33,08/21/2016,False,True,Brazil?
+5240,marcos antônio oliveira,M,Human Resources,$2087535.43,09/27/2021,False,True,Brazil
+9246,masako yoko ito,F,Support,$2351848.18,2020-03-06 00:00:00,True,True,Japán
+5680,wolfgang michael hoffmann,M,Support,$4212289.03,01/15/2018,True,False,Germany
+4221,nat*alie  françoise  robert,F,Product Management,$4945012.86,2020-09-01 00:00:00,False,True,France
+6669,francisca  adriana  lima,F,Product Management,$4602585.58,2011-04-03 00:00:00,True,True,Brazil
+2327,ANGELA CARMELA BIANCHI,F,Business Development,$2222691.67,11/30/2012,True,True,italy
+6414,FANG M$I LI,F,Accounting,$1833942.37,2012-09-01 00:00:00,True,True,China
+9055,patrícia aline ferreira,F,Human Resources,$2129980.90,08/13/2012,False,True,Brazil
+3156,angela maria romano,F,Support,$2094202.30,2010-11-11 00:00:00,False,False,Italy
+6864,alain christophe petit,M,Legal,$4015778.76,04/24/2017,True,False,France?
+7496,barbara  jessica  rodriguez,F,Support,$4721563.86,2021-06-01 00:00:00,True,False,
+9240,josé antonio gómez,M,Human Resources,$3700070.49,12/18/2019,True,False,Spain
+6780,hAo  qianG  zh4O,M,Legal,$4255337.39,2015-10-04 00:00:00,False,True,China
+5253,tomoko tomoko kato,F,Sales,$4571818.97,2011-01-02 00:00:00,False,True,Japan
+2999,linda jessica brown,F,Training,$3737782.92,05/29/2017,False,False,USA
+7798,sandrin emonique moreau,F,Support,$2559083.10,03/28/2017,False,False,France
+7769,NAOKO MICHIKO NAKA0UAR,F,Marketing,$2141342.69,08/30/2018,False,False,Japan
+9360,mar!a antônia gomes,F,Legal,$4357412.47,04/16/2020,False,False,Brazil?
+9360,patrícia adriana alves,F,Legal,$4357412.47,04/16/2020,False,False,Brazil
+7925,SANDRINE MONIQ5E LAURENT,F,Research and Development,$5162025.01,2016-02-11 00:00:00,False,False,France?
+3580,nicolas michel thomas,M,Research and Development,$3547654.59,10/22/2014,False,True,
+4193,andreas klaus becker,M,Services,$4788560.92,08/21/2014,False,False,
+6300,stefan stefan me#er,M,Legal,$4510821.64,2021-09-04 00:00:00,True,False,Germany
+7764,linda sarah brown,F,Human Resources,$5191097.12,2011-03-10 00:00:00,False,False,
+1943,lucas paulo lima,M,Engineering,$3428454.32,10/28/2016,True,True,Brazil
+7471,andré  rené  moreau,M,Accounting,$2710734.82,03/18/2011,False,True,France
+9385,sachiko tomoko sato,F,Support,$3661205.12,2017-06-06 00:00:00,False,True,Japan
+9385,lan mei li,F,Support,$3661205.12,2017-06-06 00:00:00,False,True,China?
+9632,isabel teresa rodríguez,F,Legal,$2803732.44,05/24/2019,False,True,Spain
+4307,sylvie  fr6nçoise  robert,F,Training,$1923403.57,09/18/2015,True,True,France
